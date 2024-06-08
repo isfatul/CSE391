@@ -304,9 +304,26 @@ a:hover {
   }
 }
 
+table tr > td > ul{
+  list-style: none;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 90vw;
+  max-width: 1200px;
+  margin-top: 50px;
+  gap: 40px;
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: auto;
+  }
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   width: 90vw;
   max-width: 1200px;
   margin-top: 50px;
@@ -364,6 +381,15 @@ a:hover {
   padding-bottom: 60px;
   word-wrap: break-word;
   /* max-width: 1200px; */
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: blue;
 }
 
 .quote {
