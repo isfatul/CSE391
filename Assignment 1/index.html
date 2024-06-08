@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Isfatul | Portfolio</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Portfolio of Chowdhury Isfatul Karim" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
 
@@ -20,12 +16,6 @@
     />
   </head>
   <body class="poppins-regular">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
     <header class="header">
       <div class="logo">
         <a href="./index.html" class="poppins-semibold" style="cursor: pointer">
@@ -38,7 +28,9 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#coursework">Coursework</a></li>
-          <li><a href="mailto:chowdhury.isfatul.karim@g.bracu.ac.bd">Contact</a></li>
+          <li>
+            <a href="mailto:chowdhury.isfatul.karim@g.bracu.ac.bd">Contact</a>
+          </li>
         </ul>
       </nav>
       <div>
@@ -90,6 +82,10 @@
             >Contact me</a
           >
         </div>
+      </div>
+      <div class="quote">
+        “Learn as if you will live forever, live like you will die tomorrow.”<br />
+        —Mahatma Gandhi
       </div>
       <div class="heroImage">
         <div style="position: relative">
@@ -733,7 +729,7 @@
       <div class="poppins-semibold" style="margin-top: 50px; font-size: 32px">
         <span style="color: red">C</span>oursework
       </div>
-      <div class="two-col">
+      <div class="two-col" style="word-wrap: break-word">
         <div class="card">
           <div
             style="
@@ -746,7 +742,7 @@
             <img
               src="./assets/images/portfolio.png"
               alt="zoey"
-              style="max-height: 300px; height: 50vw"
+              style="max-height: 270px; height: 50vw"
             />
           </div>
           <div
@@ -756,11 +752,13 @@
             <span style="color: red">P</span>ortfolio
           </div>
           <div>
-            This is the first assignment of CSE391: Programming for the web.
-            Here I've created this portfolio page of mine.
+            This is the first assignment of
+            <a href="https://piazza.com/bracu.ac.bd/spring2023/cse391/"
+              >CSE391: Programming for the web</a
+            >. Here I've created this portfolio page of mine.
           </div>
           <div style="margin-top: 15px">
-            <a href="https://zoeytravel.com/" class="ll-a"
+            <a href="https://github.com/isfatul/CSE391/" class="ll-a"
               >Source Code
               <img
                 width="12"
@@ -788,8 +786,10 @@
           </div>
           <div>
             This website was created as an assignment for BRAC University's
-            CSE391: Programming for the Web course during the Summer 24
-            semester.
+            <a href="https://piazza.com/bracu.ac.bd/spring2023/cse391/"
+              >CSE391: Programming for the web</a
+            >
+            course during the Summer 24 semester.
           </div>
           <div class="poppins-semibold" style="margin-top: 15px">
             Follow me on:
@@ -811,14 +811,16 @@
             </div>
           </div>
         </div>
-        <div>
+        <div style="word-wrap: break-word">
           <p id="location"></p>
           <p id="lastModified"></p>
         </div>
       </div>
-      <div style="text-align: center;">&copy; Chowdhury Isfatul Karim, 2024 | All rights reserved.</div>
+      <div style="text-align: center">
+        &copy; Chowdhury Isfatul Karim, 2024 | All rights reserved.
+      </div>
     </section>
-    <script src="" async defer>
+    <script>
       document.getElementById(
         "location"
       ).innerHTML = `<strong><span>Page's Location:</span></strong> ${window.location.href}`;
