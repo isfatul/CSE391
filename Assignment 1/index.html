@@ -11,6 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.cdnfonts.com/css/beautiful-magic"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.cdnfonts.com/css/bagel-fat-one" rel="stylesheet">
+                
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
@@ -829,8 +837,55 @@
             /></a>
           </div>
         </div>
-        <div></div>
+        <div class="card">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img
+              src="./assets/images/currency-convertor.png"
+              alt="zoey"
+              style="max-height: 270px; height: 50vw"
+            />
+          </div>
+          <div
+            class="poppins-semibold"
+            style="font-size: 24px; margin-top: 20px"
+          >
+            <span style="color: red">C</span>urrency
+            <span style="color: red">C</span>onvertor
+          </div>
+          <div>
+            This is the second assignment of
+            <a href="https://piazza.com/bracu.ac.bd/spring2023/cse391/"
+              >CSE391: Programming for the web</a
+            >. 
+          </div>
+          <div style="margin-top: 15px">
+            <a href="https://github.com/isfatul/CSE391/" class="ll-a"
+              >Source Code
+              <img
+                width="12"
+                height="12"
+                src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/50/external-online-web-link-attach-with-url-information-text-bold-tal-revivo.png"
+                alt="external-online-web-link-attach-with-url-information-text-bold-tal-revivo"
+            /></a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section style="margin: 30px 0px; text-align: center;" class="magicFont">
+      <div style="font-size: 36px">
+        <span style="color: red">R</span>andom
+        <span style="color: red">F</span>ortune
+        <span style="color: red">G</span>enerator
+      </div>
+      <div id="fortune" style="font-size: 32px"></div>
     </section>
 
     <section class="footer">
@@ -888,6 +943,35 @@
       document.getElementById(
         "lastModified"
       ).innerHTML = `<strong><span">Last Modified:</span></strong> ${document.lastModified}`;
+
+      const fortunes = [
+        "True wisdom comes not from knowledge, but from understanding.",
+        "A journey of a thousand miles begins with a single step.",
+        "Happiness is not a destination, it's a way of life.",
+        "Every accomplishment starts with the decision to try.",
+        "Success is not the key to happiness. Happiness is the key to success.",
+        "You will meet someone special soon.",
+        "Your hard work will pay off in the near future.",
+        "Believe in yourself and all that you are.",
+        "Good things come to those who wait.",
+        "Patience is a virtue that will be rewarded.",
+        "An unexpected event will bring you joy.",
+        "Your positive attitude will lead to great outcomes.",
+        "You are capable of achieving great things.",
+        "The best is yet to come.",
+        "Opportunities are heading your way.",
+        "You will find what you seek in the most unexpected place.",
+        "A fresh start will put you on your way.",
+        "Your kindness will lead to success.",
+        "Embrace change, it will bring new blessings.",
+        "Your dreams are within reach, keep pushing forward.",
+      ];
+
+      const fortune = document.getElementById("fortune");
+      const randomFortune =
+        fortunes[Math.floor(Math.random() * fortunes.length)];
+
+      fortune.innerHTML = `"${randomFortune}"`;
     </script>
   </body>
 </html>

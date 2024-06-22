@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Assignment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body class="poppins-regular">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+      id="initialPrompt"
+    >
+      <h1>Quiz!</h1>
+      <div style="text-align: center">
+        <label for="name" class="poppins-semibold" style="font-size: 16pt"
+          >How many questions do you want to attempt:</label
+        >
+        <select id="num">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="startBtn" id="startQuiz">Start Quiz</div>
+    </div>
+
+    <div class="qnum" id="qz1">
+      Question <span id="current-ques"></span>/<span id="total-ques"></span>
+    </div>
+    <div class="qcont" id="qz2">
+      <div class="ques" id="question"></div>
+      <div class="qans">
+        <input type="radio" name="a1" id="a1" value="0" /><label for="a1">
+          (A) <span id="optA">Sydney</span>
+        </label>
+        <input type="radio" name="a1" id="a2" value="1" /><label for="a2">
+          (B) <span id="optB">Melbourne</span></label
+        >
+        <input type="radio" name="a1" id="a3" value="2" /><label for="a3">
+          (C) <span id="optC">Canberra</span></label
+        >
+      </div>
+      <div class="nextbtn" id="next">> Next</div>
+    </div>
+
+    <div
+      id="result"
+      style="
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+      "
+    >
+      <div style="font-weight: bold; font-size: 22px; text-align: center; margin-bottom: 3rem;">
+        You answered <span id="correct">3</span> out of <span id="total">5</span> questions correctly! (<span id="percentage">60</span>%)
+      </div>
+      <!-- <div id="result2" style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; align-items: normal;"> -->
+        <!-- <div>
+          <div>Question 1: What is the capital of Bangladesh?</div>
+          <div>You guessed B) Dhaka</div>
+          <div>CORRECT</div>
+        </div>
+        <div>
+          <div>Question 2: What is the capital of Japan?</div>
+          <div>You guessed B) Osaka</div>
+          <div>INCORRECT: the correct answer is A) Tokyo</div>
+        </div> -->
+      <!-- </div> -->
+    </div>
+
+    <!-- <div id="submit">Submit</div> -->
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
